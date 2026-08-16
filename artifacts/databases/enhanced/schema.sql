@@ -1,0 +1,10 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE IF NOT EXISTS devices (device_id INTEGER PRIMARY KEY, name TEXT NOT NULL UNIQUE, host TEXT NOT NULL, port INTEGER NOT NULL CHECK (port BETWEEN 1 AND 65535), platform TEXT NOT NULL CHECK (platform = 'cisco_ios'));
+CREATE TABLE IF NOT EXISTS task_requests (task_id TEXT PRIMARY KEY, device_id INTEGER NOT NULL REFERENCES devices(device_id), interface TEXT NOT NULL, address TEXT NOT NULL, description TEXT NOT NULL CHECK (length(description) BETWEEN 1 AND 80), UNIQUE (device_id, interface));
+CREATE TABLE IF NOT EXISTS task_dependencies (task_id TEXT NOT NULL REFERENCES task_requests(task_id), depends_on_task_id TEXT NOT NULL REFERENCES task_requests(task_id), PRIMARY KEY (task_id, depends_on_task_id), CHECK (task_id <> depends_on_task_id));
+CREATE TABLE IF NOT EXISTS execution_runs (run_id INTEGER PRIMARY KEY, started_at TEXT NOT NULL, finished_at TEXT, mode TEXT NOT NULL CHECK (mode IN ('dry-run', 'apply')), status TEXT NOT NULL CHECK (status IN ('running', 'completed', 'failed')), total_tasks INTEGER NOT NULL DEFAULT 0 CHECK (total_tasks >= 0), failed_tasks INTEGER NOT NULL DEFAULT 0 CHECK (failed_tasks >= 0));
+CREATE TABLE IF NOT EXISTS task_results (result_id INTEGER PRIMARY KEY, run_id INTEGER NOT NULL REFERENCES execution_runs(run_id), task_id TEXT NOT NULL REFERENCES task_requests(task_id), device_name TEXT NOT NULL, status TEXT NOT NULL CHECK (status IN ('planned', 'applied', 'failed')), commands_sent INTEGER NOT NULL CHECK (commands_sent >= 0), message TEXT NOT NULL, recorded_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS audit_events (event_id INTEGER PRIMARY KEY, run_id INTEGER REFERENCES execution_runs(run_id), event_type TEXT NOT NULL, message TEXT NOT NULL, created_at TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS idx_task_results_run ON task_results(run_id);
+CREATE INDEX IF NOT EXISTS idx_execution_runs_started ON execution_runs(started_at DESC);
+CREATE INDEX IF NOT EXISTS idx_audit_events_run ON audit_events(run_id);

@@ -1,0 +1,13 @@
+---
+- name: Configure Loopback0 on a Cisco IOS router
+  hosts: routers
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: Create Loopback0
+      cisco.ios.ios_config:
+        parents: interface Loopback0
+        lines:
+          - ip address 1.1.1.1 255.255.255.255
+          - no shutdown

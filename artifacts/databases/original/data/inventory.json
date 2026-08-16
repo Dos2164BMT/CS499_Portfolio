@@ -1,0 +1,14 @@
+[
+  {
+    "name": "lawrence-r1",
+    "host": "192.0.2.10",
+    "port": 22,
+    "platform": "cisco_ios"
+  },
+  {
+    "name": "backup-r1",
+    "host": "192.0.2.11",
+    "port": 22,
+    "platform": "cisco_ios"
+  }
+]

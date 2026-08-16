@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "total": 2,
+    "planned": 2,
+    "applied": 0,
+    "failed": 0
+  },
+  "results": [
+    {
+      "task_id": "lawrence-loopback0",
+      "device": "lawrence-r1",
+      "status": "planned",
+      "commands_sent": 0,
+      "message": "configure terminal | interface Loopback0 | description CS499 management loopback | ip address 1.1.1.1 255.255.255.255 | no shutdown | end | write memory",
+      "timestamp": "2026-07-28T03:10:18.086174+00:00"
+    },
+    {
+      "task_id": "backup-loopback0",
+      "device": "backup-r1",
+      "status": "planned",
+      "commands_sent": 0,
+      "message": "configure terminal | interface Loopback0 | description CS499 backup management loopback | ip address 1.1.1.2 255.255.255.255 | no shutdown | end | write memory",
+      "timestamp": "2026-07-28T03:10:18.086469+00:00"
+    }
+  ]
+}

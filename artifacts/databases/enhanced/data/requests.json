@@ -1,0 +1,20 @@
+[
+  {
+    "id": "lawrence-loopback0",
+    "device": "lawrence-r1",
+    "interface": "Loopback0",
+    "address": "1.1.1.1/32",
+    "description": "CS499 management loopback",
+    "depends_on": []
+  },
+  {
+    "id": "backup-loopback0",
+    "device": "backup-r1",
+    "interface": "Loopback0",
+    "address": "1.1.1.2/32",
+    "description": "CS499 backup management loopback",
+    "depends_on": [
+      "lawrence-loopback0"
+    ]
+  }
+]

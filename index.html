@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bruno Manuel's CS 499 Computer Science capstone ePortfolio.">
+  <title>Bruno Manuel | CS 499 ePortfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">BM<span>.</span></a>
+    <nav aria-label="Portfolio navigation">
+      <a href="#assessment">Assessment</a>
+      <a href="#review">Code Review</a>
+      <a href="#artifacts">Artifacts</a>
+      <a href="#outcomes">Outcomes</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">CS 499 · Computer Science Capstone</p>
+      <h1>Bruno Manuel</h1>
+      <p class="hero-copy">I build reliable software at the intersection of networking,
+        automation, data, and security.</p>
+      <div class="actions">
+        <a class="button primary" href="#assessment">Read my assessment</a>
+        <a class="button secondary" href="https://github.com/Dos2164BMT/CS499_Portfolio">View repository</a>
+      </div>
+      <ul class="skill-strip" aria-label="Core skills">
+        <li>Java</li><li>Python</li><li>SQLite</li><li>Algorithms</li><li>Testing</li><li>Secure Automation</li>
+      </ul>
+    </section>
+
+    <section id="assessment" class="section prose">
+      <p class="eyebrow">Professional Self-Assessment</p>
+      <h2>From infrastructure experience to complete computing solutions</h2>
+      <p>Completing the Computer Science program at Southern New Hampshire University
+        changed how I approach technical problems. My professional background includes
+        fiber-optic networks, routers, switches, gateways, network video recorders,
+        surveillance systems, and customer internet services. Coursework in software
+        development, testing, algorithms, databases, full-stack development, and secure
+        coding taught me to connect that infrastructure experience with disciplined
+        software engineering. I no longer view networking and programming as separate
+        paths. I see software, automation, and data as essential parts of reliable modern
+        operations.</p>
+
+      <p>The program strengthened my ability to collaborate in a team environment by
+        teaching me to make technical work understandable and reproducible for others.
+        Version-controlled source, focused commits, descriptive identifiers, automated
+        tests, documented setup steps, and structured reports allow another developer to
+        review a decision and continue the work. Course experiences involving requirements,
+        Agile roles, testing, and code review also taught me to separate feedback about a
+        solution from feedback about a person. I use requirements and observable evidence
+        to build shared understanding, reduce ambiguity, and support organizational decisions.</p>
+
+      <p>Communication with stakeholders is equally important. A manager needs risk,
+        progress, and business impact; a developer needs interfaces, constraints, and test
+        evidence; an end user needs clear behavior and useful error messages. Across this
+        portfolio I communicate through a recorded code review, written narratives, diagrams,
+        README instructions, JSON reports, and this accessible web presentation. This range
+        demonstrates my ability to adapt technical information without losing accuracy.</p>
+
+      <p>My work with data structures and algorithms taught me to evaluate design choices
+        instead of selecting a structure only because it is familiar. The network-automation
+        planner indexes devices in dictionaries for average constant-time lookup, uses sets
+        for duplicate detection, sorts numeric IPv4 intervals to detect overlap in
+        O(n log n), and models dependencies as a directed graph. Kahn's topological-sort
+        algorithm orders tasks in O(V + E), while a min-heap makes valid execution order
+        deterministic. These decisions demonstrate that correctness, scalability, and
+        explainability can reinforce one another.</p>
+
+      <p>Software engineering and database coursework prepared me to design cohesive systems
+        instead of isolated scripts. In the Appointment Service, centralized validation,
+        custom exceptions, defensive copies, dependency injection, immutable snapshots,
+        and focused tests improve maintainability and reliability. In the database artifact,
+        a normalized SQLite schema separates devices, task requests, dependencies, execution
+        runs, results, and audit events. Primary and foreign keys, constraints, indexes,
+        transactions, and parameterized queries protect integrity while preserving a useful
+        operational history.</p>
+
+      <p>Security is a design requirement throughout my work. I validate inputs before they
+        reach state-changing operations, reject unknown SSH host keys, keep credentials in
+        environment variables, default network automation to dry-run mode, require an explicit
+        apply flag, use bound SQL parameters, and exclude credentials from persistent storage.
+        I also use rollback commands, atomic database transactions, bounded history queries,
+        and failure-oriented tests. These controls reflect a mindset of anticipating misuse,
+        minimizing exposure, and failing safely.</p>
+
+      <p>My goal is to contribute as a network automation, systems, DevOps, or software
+        engineer in an organization where reliable infrastructure and maintainable software
+        meet. The artifacts below form one progression: a classroom service becomes a more
+        professional software design; a hard-coded network script becomes a validated and
+        deterministic planning system; and that system gains persistent, auditable data.
+        Together they provide measurable evidence of my growth and readiness to deliver
+        secure computing solutions that create practical value.</p>
+    </section>
+
+    <section id="review" class="section split">
+      <div>
+        <p class="eyebrow">Informal Code Review</p>
+        <h2>Analyzing the starting point</h2>
+        <p>The recorded walkthrough reviews existing functionality, identifies improvements
+          in structure, validation, efficiency, persistence, testing, and security, and explains
+          the planned enhancement path.</p>
+        <a class="button primary" href="https://vimeo.com/1218736228?share=copy&amp;fl=sv&amp;fe=ci">Watch on Vimeo</a>
+      </div>
+      <div class="review-card" aria-label="Code review details">
+        <span>Video</span>
+        <strong>CS499_Bruno_Manuel_OneCodeReview</strong>
+        <p>Audience: peers and technical managers</p>
+      </div>
+    </section>
+
+    <section id="artifacts" class="section">
+      <p class="eyebrow">Original + Enhanced Work</p>
+      <h2>Three enhancement categories</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="number">01</span>
+          <h3>Software Design &amp; Engineering</h3>
+          <p>The CS 320 Appointment Service advances from list-based classroom code to a
+            maintainable service with centralized validation, custom exceptions, defensive
+            state protection, updates, immutable snapshots, and deterministic date tests.</p>
+          <ul><li>Java 17 and JUnit 5</li><li>11 focused tests</li><li>Dependency-injected Clock</li></ul>
+          <div class="links">
+            <a href="https://github.com/Dos2164BMT/CS499_Portfolio/tree/main/artifacts/software-engineering/original">Original</a>
+            <a href="https://github.com/Dos2164BMT/CS499_Portfolio/tree/main/artifacts/software-engineering/enhanced">Enhanced</a>
+            <a href="documents/Software_Engineering_Narrative.docx">Narrative</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="number">02</span>
+          <h3>Algorithms &amp; Data Structures</h3>
+          <p>A hard-coded Cisco IOS script becomes a multi-device planner with dictionaries,
+            sets, sorted IPv4 intervals, graph-based dependency ordering, cycle detection,
+            deterministic output, rollback commands, and safe execution adapters.</p>
+          <ul><li>O(n log n) conflict detection</li><li>O(V + E) topological sort</li><li>10 passing tests</li></ul>
+          <div class="links">
+            <a href="https://github.com/Dos2164BMT/CS499_Portfolio/tree/main/artifacts/algorithms/original">Original</a>
+            <a href="https://github.com/Dos2164BMT/CS499_Portfolio/tree/main/artifacts/algorithms/enhanced">Enhanced</a>
+            <a href="documents/Algorithms_Narrative.docx">Narrative</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="number">03</span>
+          <h3>Databases</h3>
+          <p>The automation planner gains normalized SQLite persistence for configuration
+            intent, execution runs, results, dependencies, and audit events. Transactions and
+            constraints preserve history without storing secrets.</p>
+          <ul><li>Six normalized tables</li><li>Parameterized SQL and rollback</li><li>16 passing tests total</li></ul>
+          <div class="links">
+            <a href="https://github.com/Dos2164BMT/CS499_Portfolio/tree/main/artifacts/databases/original">Original</a>
+            <a href="https://github.com/Dos2164BMT/CS499_Portfolio/tree/main/artifacts/databases/enhanced">Enhanced</a>
+            <a href="documents/Database_Narrative.docx">Narrative</a>
+          </div>
+        </article>
+      </div>
+      <p class="change-note"><strong>Change from the initial plan:</strong> The Appointment
+        Service remained the Software Engineering artifact. After evaluating enhancement depth
+        and career alignment, the Cisco IOS automation project became the Algorithms and
+        Database artifact. This change provided stronger evidence of graph algorithms,
+        network-specific validation, secure execution, relational modeling, and auditability.</p>
+    </section>
+
+    <section id="outcomes" class="section">
+      <p class="eyebrow">Program Outcomes</p>
+      <h2>Evidence across the portfolio</h2>
+      <div class="outcomes">
+        <article><b>01</b><h3>Collaboration</h3><p>Reproducible setup, GitHub organization,
+          tests, readable modules, structured reports, and stakeholder-focused documentation.</p></article>
+        <article><b>02</b><h3>Communication</h3><p>Oral code review, written narratives,
+          visual presentation, API-style reports, and audience-appropriate explanations.</p></article>
+        <article><b>03</b><h3>Algorithms</h3><p>Documented complexity, scalable address
+          conflict detection, graph modeling, deterministic topological ordering, and trade-offs.</p></article>
+        <article><b>04</b><h3>Technical Value</h3><p>Java, Python, Paramiko, JSON, JUnit,
+          unittest, SQLite, GitHub Pages, and industry-focused network automation.</p></article>
+        <article><b>05</b><h3>Security</h3><p>Input validation, strict host verification,
+          environment secrets, safe defaults, prepared SQL, constraints, transactions, and audits.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Bruno Manuel · Bachelor of Science in Computer Science · Southern New Hampshire University</p>
+    <a href="https://github.com/Dos2164BMT">GitHub profile</a>
+  </footer>
+</body>
+</html>
