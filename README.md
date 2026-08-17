@@ -3,7 +3,7 @@
 This repository contains Bruno Manuel's final SNHU CS 499 ePortfolio, including:
 
 - professional self-assessment presented on the home page;
-- [informal code review](https://vimeo.com/1218736228);
+- [informal code review](https://vimeo.com/1218747473);
 - original and enhanced artifacts for Software Design and Engineering;
 - original and enhanced artifacts for Algorithms and Data Structures;
 - original and enhanced artifacts for Databases;
